@@ -212,7 +212,6 @@ h3{
 /*-----------------How to Get Involved-----------------*/
 
 .HowToGetInvolved{
-    width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
@@ -224,7 +223,6 @@ h3{
     text-align: left;
 }
 .-HowToGetInvolvedcol img{
-    width: 100%;
     border-radius: 10px;
 }
 
