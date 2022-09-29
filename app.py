@@ -12,20 +12,32 @@ db_name = "ife-charity-mongodb"
 CONNECTION_STRING = os.environ['MONGO_URL']
 
 @app.route("/")
-def home():
+def root():
     return render_template('homepage.html')
 
-@app.route("/schoolp")
-def schoolp():
-    return render_template('schoolp.html')
+@app.route("/HomePage")
+def home():
+    return render_template('HomePage.html')
 
-@app.route("/childp")
-def childp():
-    return render_template('childp.html')
+@app.route("/LoginRegisterPage")
+def LoginRegisterPage():
+    return render_template('LoginRegisterPage.html')
 
-@app.route("/sponsorp")
-def sponsorp():
-    return render_template('sponsorp.html')
+@app.route("/childreg")
+def childreg():
+    return render_template('childreg.html')
+
+@app.route("/ContactUs")
+def ContactUs():
+    return render_template('ContactUs.html')
+
+@app.route("/schoolreg")
+def schoolreg():
+    return render_template('schoolreg.html')
+
+@app.route("/Donate")
+def Donate():
+    return render_template('Donate.html')
 
 @app.route("/school_submit", methods=['POST'])
 def school():

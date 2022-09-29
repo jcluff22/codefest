@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name ="viewport" content="with=device-width, inital-scale=1,0"></meta>
+    <title> Start Young UK </title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="HomePage"><img src="images/logo.jpeg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onlclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="HomePage">HOME</a></li>
+                    <li><a href="LoginRegisterPage">LOGIN/RESGISTER</a></li>
+                    <li><a href="ContactUs">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onlclick="showMenu()"></i>
+        </nav>
+        <h1>Contact Us</h1>
+    </div>
+    </section> 
+
+    <section class="location">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79426.76420935891!2d-0.03077284089465247!3d51.52997544919627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a7ceba82117d%3A0x40eae2da2ec6760!2sLondon%20Borough%20of%20Newham!5e0!3m2!1sen!2suk!4v1664413904179!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="contact-us">
+
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Newham,London,United Kingdom</h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="contact-col">
+            <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>07946369885</h5>
+                    <p>Everyday 9am - 5pm<br></p>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="contact-col">
+        <div>
+            <i class="fa fa-envelope-o"></i>
+            <span>
+                <h5>Startyoung21@gmail.com</h5>
+                <p>Email Us<br></p>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="contact-col">
+
+    <form action="">
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your Email Address" required>
+        <input type="text" placeholder="Enter Your Subject" required>
+        <textarea rows="8" p></textarea>
+        <button type="Sumbit" class="hero-btn red-btn">Send Message</button>
+    </form>
+
+</div>
+    </section>
+
+
+
+    <section class="footer">
+        <h4>Social Media</h4>
+        <p>Follow Us for Updates on How We're Helping Young People Surpass there Potential</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px"
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>
