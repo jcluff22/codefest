@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <meta name ="viewport" content="with=device-width, inital-scale=1,0"></meta>
-     <title> Start Young UK </title>
-     <link rel="stylesheet" href="../CSS/style.css"></link>
-     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <meta name ="viewport" content="with=device-width, inital-scale=1,0"></meta>
+    <title> Start Young UK </title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
@@ -12,13 +12,13 @@
 <body>
     <section class="header">
         <nav>
-            <a href="HomePage.html"><img src="images/logo.jpeg"></a>
+            <a href="HomePage"><img src="images/logo.jpeg"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onlclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="HomePage.html">HOME</a></li>
-                    <li><a href="LoginRegisterPage.html">LOGIN/RESGISTER</a></li>
-                    <li><a href="ContactUs.HTML">CONTACT US</a></li>
+                    <li><a href="HomePage">HOME</a></li>
+                    <li><a href="LoginRegisterPage">LOGIN/RESGISTER</a></li>
+                    <li><a href="ContactUs">CONTACT US</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onlclick="showMenu()"></i>
