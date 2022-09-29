@@ -24,15 +24,14 @@ def school():
 @app.route("/child", methods=['POST'])
 def child():
     data = request.form.to_dict(flat=False)
-    documentid = main_update(data, db_name, "school")
-    main_update(data, db_name, "child")
-    
+    documentid = main_update(data, db_name, "child")
+    return render_template('success.html')
 
 @app.route("/sponsor", methods=['POST'])
 def sponsor():
     data = request.form.to_dict(flat=False)
-    documentid = main_update(data, db_name, "school")
-    main_update(data, db_name, "sponsor")
+    documentid = main_update(data, db_name, "sponsor")
+    return render_template('success.html')
 
 def main_update(inputjson, db_name, collection_name):
     """Connect to the API for MongoDB, create DB and collection, perform CRUD operations"""
