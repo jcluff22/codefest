@@ -8,7 +8,8 @@ import pymongo
 app = Flask(__name__, static_url_path='')
 
 db_name = "ife-charity-mongodb"
-CONNECTION_STRING = 'xxx'
+CONNECTION_STRING = os.environ['MONGO_URL']
+
 @app.route("/")
 def home():
     return render_template('homepage.html')
