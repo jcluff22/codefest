@@ -1,7 +1,7 @@
 from azure.communication.email import EmailClient, EmailContent, EmailAddress, EmailMessage, EmailRecipients
 import os
 
-def send_email(email_add, subject, body):
+def send_email(subject, body):
     connection_string = os.environ['EMAIL_COMM_ENDPOINT']
     #"endpoint=https://codefestifecomm.communication.azure.com/;accesskey=ROiTNOMToF+W8A8nRRTfp4tF4vwXeLvcf0R+DIYEd92tx1VfGcV/UkuU/7dJC/coVWifRQEz0YylZZqzNWFCVg=="
 
@@ -13,10 +13,10 @@ def send_email(email_add, subject, body):
         html= f'<html><h1>{body}</h1></html>',
     )
 
-    address = EmailAddress(email=email_add, display_name=email_add)
+    address = EmailAddress(email=os.environ['ADMIN_EMAIL'], display_name=os.environ['ADMIN_EMAIL'])
 
     message = EmailMessage(
-                sender="donotreply@23f047cd-187a-42ee-8034-456ebb999f86.azurecomm.net",
+                sender=os.environ['EMAIL_SENDER'],
                 content=content,
                 recipients=EmailRecipients(to=[address])
             )
