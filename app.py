@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
-from flask import Flask, request, send_from_directory
+from flask import Flask, request, render_template
 from database_update import main_update, db_connect, get_collection, add_document, main_update
 import json
 
-app = Flask(__name__, static_url_path='web/static')
+app = Flask(__name__, static_url_path='')
 
 db_name = "ife-charity-mongodb"
 
 @app.route("/")
 def home():
-    return app.send_static_file('form.html')
+    return render_template('form.html')
 
 @app.route("/school", methods=['POST'])
 def school():
