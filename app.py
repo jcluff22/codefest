@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
 from flask import Flask, request, render_template
-from database_update import db_connect, get_collection, add_document
+from src.database_update import db_connect, get_collection, add_document
 from werkzeug.datastructures import ImmutableMultiDict
-import json
 import pymongo
 
 app = Flask(__name__, static_url_path='')
@@ -26,19 +25,19 @@ def childp():
 def sponsorp():
     return render_template('sponsorp.html')
 
-@app.route("/school", methods=['POST'])
+@app.route("/school_submit", methods=['POST'])
 def school():
     data = request.form.to_dict(flat=False)
     documentid = main_update(data, db_name, "school")
     return render_template('success.html')
 
-@app.route("/child", methods=['POST'])
+@app.route("/child_submit", methods=['POST'])
 def child():
     data = request.form.to_dict(flat=False)
     documentid = main_update(data, db_name, "child")
     return render_template('success.html')
 
-@app.route("/sponsor", methods=['POST'])
+@app.route("/sponsor_submit", methods=['POST'])
 def sponsor():
     data = request.form.to_dict(flat=False)
     documentid = main_update(data, db_name, "sponsor")

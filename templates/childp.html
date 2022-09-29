@@ -1,0 +1,117 @@
+<head>
+    <h1>Child Registration Form - School</h1>
+    </head>
+    <body>
+        <h2>Registration</h2>
+     
+        <form action="{{ url_for('child') }}" method="post">
+          <label for="phone">School ID:</label><br>
+          <input type="number" id="SchoolID" name="SchoolID"><br><br>
+     
+          <h3>Primary Parent Details</h3>
+          <label for="PrimaryParentfname">Primary Parent First name:</label><br>
+          <input type="text" id="PrimaryParentfname" name="PrimaryParentfname"><br><br>
+          <label for="PrimaryParentlname">Primary Parent Last name:</label><br>
+          <input type="text" id="PrimaryParentlname" name="PrimaryParentlname"><br><br>
+          <label for="PrimaryDOB">Primary Parent Date of Birth:</label><br>
+          <input type="date" id="PrimaryParentDOB" name="PrimaryParentDOB"><br><br>
+          <label for="PrimaryParentEmail">Primary Parent Email Address:</label><br>
+          <input type="email" id="PrimaryParentemail" name="PrimaryParentemail"><br><br>
+          <label for="PrimaryMobilePhone">Primary Parent Mobile Phone Number:</label><br>
+          <input type="number" id="PrimaryParentMobilePhoneNumber" name="PrimaryParentMobilePhone"><br><br>
+          <label for="SecondaryEthnicity">Primary Parent Ethnicity:</label><br>
+          <input type="text" id="PrimaryEthnicity" name="PrimaryEthnicity"><br><br>
+     
+          <h3>Primary Address</h3>
+          <label for="PrimaryStreetAddress">Street Address:</label><br>
+          <input type="text" id="PrimaryStreetAddress" name="PrimaryStreetAddress"><br><br>
+          <label for="PrimaryPostcode">Postcode:</label><br>
+          <input type="text" id="PrimaryPostcode" name="PrimaryPostcode"><br><br>
+          <label for="PrimaryTownCity">Town/City:</label><br>
+          <input type="text" id="PrimaryTownCity" name="PrimaryTownCity"><br><br>
+          <label for="PrimaryHomePhone">Home Phone Number:</label><br>
+          <input type="number" id="PrimaryHomePhone" name="PrimaryHomePhone"><br><br>
+     
+          <h3>Secondary Parent/Carer Details</h3>
+          <label for="SecondaryParentfname">Secondary Parent/Carer First name:</label><br>
+          <input type="text" id="SecondaryParentfname" name="SecondaryParentfname"><br><br>
+          <label for="SecondaryParentlname">Secondary/Carer Parent Last name:</label><br>
+          <input type="text" id="SecondaryParentlname" name="SecondaryParentlname"><br><br>
+          <label for="SeconadryDOB">Secondary Parent/Carer Date of Birth:</label><br>
+          <input type="date" id="PrimaryParentDOB" name="PrimaryParentDOB"><br><br>
+          <label for="SecondaryParentEmail">Secondary Parent/Carer Email Address:</label><br>
+          <input type="email" id="PrimaryParentemail" name="PrimaryParentemail"><br><br>
+          <label for="SecondaryMobilePhone">Secondary Parent/Carer Mobile Phone Number:</label><br>
+          <input type="number" id="SecondaryParentMobilePhoneNumber" name="SecondaryParentMobilePhone"><br><br>
+          <label for="SecondaryEthnicity">Secondary Parent/Carer Ethnicity:</label><br>
+          <input type="text" id="SecondaryEthnicity" name="SecondaryEthnicity"><br><br>
+     
+          <h3>Secondary Address</h3>
+          <label for="SecondarystreetAddress">Street Address:</label><br>
+          <input type="text" id="SecondaryStreetAddress" name="SecondaryStreetAddress"><br><br>
+          <label for="SecondaryPostcode">Postcode:</label><br>
+          <input type="text" id="SecondaryPostcode" name="SecondaryPostcode"><br><br>
+          <label for="SecondaryTownCity">Town/City:</label><br>
+          <input type="text" id="SecondaryTownCity" name="SecondaryTownCity"><br><br>
+          <label for="SecondaryHomePhone">Home Phone Number:</label><br>
+          <input type="number" id="SecondaryHomePhone" name="SecondaryHomePhone"><br><br>
+          <input type="radio" id="SameAsPrimary" name="SameAsPrimary" value="SameAsPrimary">
+          <label for="text">Same as Primary Adddress</label><br><br>
+     
+          
+          <h3>Child Details</h3>
+          <label for="Childfname">Child First name:</label><br>
+          <input type="text" id="Childfname" name="Childfname"><br><br>
+          <label for="Childlname">Child Last name:</label><br>
+          <input type="text" id="Childlname" name="Childname"><br><br>
+          <label for="ChildDOB">Child Date of Birth:</label><br>
+          <input type="date" id="CDOB" name="CDOB"><br><br>
+          <label for="FirstLanguage">First Language:</label><br>
+          <input type="text" id="FirstLanguage" name="FirstLanguage"><br><br>
+          <label for="ChildEthnicity">Ethnicity:</label><br>
+          <input type="text" id="Ethnicity" name="Ethnicity"><br><br>
+     
+          <h3>Eligiblity Criteria</h3>
+          <input type="radio" id="LowIncome" name="Eligiblity" value="LowIncome">
+          <label for="text">Low-income Household</label><br>
+          <input type="radio" id="FoodBanks" name="Eligiblity" value="FoodBanks">
+          <label for="text">Frequent user of Food banks</label><br>
+          <input type="radio" id="NoPublicFunds" name="NoPublicFunds" value="NoPublicFunds">
+          <label for="text">No access to public funds</label><br>
+          <input type="radio" id="SocialServices" name="SocialServices" value="SocialServices">
+          <label for="text">Children/family under social services</label><br>
+          <input type="radio" id="AtRisk" name="AtRisk" value="AtRisk">
+          <label for="text">At Risk</label><br>
+          <input type="radio" id="SEND" name="SEND" value="SEND">
+          <label for="text">SEND</label><br><br>
+          <label for="Other">Other:</label><br>
+          <input type="Other" id="Other" name="Other"><br><br>
+          
+     
+          <h3>Child Interests</h3>
+          <input type="radio" id="Football" name="Football" value="Football">
+          <label for="text">Football</label><br>
+          <input type="radio" id="Cricket" name="Cricket" value="Cricket">
+          <label for="text">Cricket</label><br>
+          <input type="radio" id="Tennis" name="Tennis" value="Tennis">
+          <label for="text">Tennis</label><br>
+          <input type="radio" id="ArtsCrafts" name="ArtsCrafts" value="ArtsCrafts">
+          <label for="text">Arts & Crafts</label><br>
+          
+          <input type="radio" id="Walking" name="Walking" value="Walking">
+          <label for="text">Walking</label><br>
+          <input type="radio" id="Reading" name="Reading" value="Reading">
+          <label for="text">Reading</label><br>
+          <input type="radio" id="TV" name="TV" value="TV">
+          <label for="text">TV Programmes</label><br>
+          <input type="radio" id="Film" name="Film" value="Film">
+          <label for="text">Favorite film genre</label><br>
+          <input type="radio" id="VideoGames" name="VideoGames" value="VideoGames">
+          <label for="text">Video Games</label><br><br><br>
+          
+          
+     
+          
+          <input type="submit" value="Submit">
+        </form>  
+    
