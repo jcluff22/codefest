@@ -12,7 +12,19 @@ db_name = "ife-charity-mongodb"
 CONNECTION_STRING = 'xxx'
 @app.route("/")
 def home():
-    return render_template('child_registration.html')
+    return render_template('homepage.html')
+
+@app.route("/schoolp")
+def childp():
+    return render_template('schoolp.html')
+
+@app.route("/childp")
+def childp():
+    return render_template('childp.html')
+
+@app.route("/sponsorp")
+def sponsorp():
+    return render_template('sponsorp.html')
 
 @app.route("/school", methods=['POST'])
 def school():
