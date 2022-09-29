@@ -45,6 +45,7 @@ def school():
     data = request.form.to_dict(flat=False)
     data['admin_approval'] = 'False'
     documentid = main_update(data, db_name, "school")
+    send_email('New school registration request', f'https://jc-flask-test-635.azurewebsites.net/approval/{documentid}')
     return render_template('success.html')
 
 @app.route("/child_submit", methods=['POST'])
