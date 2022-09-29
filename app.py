@@ -30,12 +30,14 @@ def sponsorp():
 @app.route("/school_submit", methods=['POST'])
 def school():
     data = request.form.to_dict(flat=False)
+    data['admin_approval'] = 'False'
     documentid = main_update(data, db_name, "school")
     return render_template('success.html')
 
 @app.route("/child_submit", methods=['POST'])
 def child():
     data = request.form.to_dict(flat=False)
+    data['parental_approval'] = 'False'
     documentid = main_update(data, db_name, "child")
     return render_template('success.html')
 
