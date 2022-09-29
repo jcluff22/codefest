@@ -3,6 +3,7 @@
 from flask import Flask, request, render_template
 from src.database_update import db_connect, get_collection, add_document
 from werkzeug.datastructures import ImmutableMultiDict
+from src.emailclient import send_email
 import pymongo
 import os
 
@@ -51,6 +52,7 @@ def child():
     data = request.form.to_dict(flat=False)
     data['parental_approval'] = 'False'
     documentid = main_update(data, db_name, "child")
+    send_email('New child registration request', f'https://jc-flask-test-635.azurewebsites.net/approval/{documentid}')
     return render_template('success.html')
 
 @app.route("/sponsor_submit", methods=['POST'])
