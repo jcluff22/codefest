@@ -1,19 +1,10 @@
 <head>
-  <meta name ="viewport" content="with=device-width, inital-scale=1,0"></meta>
-  <title> Start Young UK </title>
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
-</head>
-<head>
 <h1>Child Registration Form - School</h1>
 </head>
 <body>
     <h2>Registration</h2>
 
-    <form form action="{{ url_for('school') }}" method="post">
+    <form form action="{{ url_for('child') }}" method="post">
       <div class="SchoolID">
         <div class="Childinput-box"></div>
           <label for="SchoolID">School ID:</label><br>
