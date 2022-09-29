@@ -14,7 +14,7 @@ def home():
     return render_template('homepage.html')
 
 @app.route("/schoolp")
-def childp():
+def schoolp():
     return render_template('schoolp.html')
 
 @app.route("/childp")
