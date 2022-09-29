@@ -9,11 +9,10 @@ import pymongo
 app = Flask(__name__, static_url_path='')
 
 db_name = "ife-charity-mongodb"
-CONNECTION_STRING = 'mongodb://ife-charity-mdb:gyTxoa3F2HoN6Iwb2mhOwpjkTVl4wa6HrzDODrdNHYT8HAQCIybrIUM7gdN6LWgDpLkAAGmh1auuaTZpXG2RnQ==@ife-charity-mdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@ife-charity-mdb@' 
-
+CONNECTION_STRING = 'xxx'
 @app.route("/")
 def home():
-    return render_template('form.html')
+    return render_template('child_registration.html')
 
 @app.route("/school", methods=['POST'])
 def school():
