@@ -4,6 +4,7 @@ from flask import Flask, request, render_template
 from src.database_update import db_connect, get_collection, add_document
 from werkzeug.datastructures import ImmutableMultiDict
 import pymongo
+import os
 
 app = Flask(__name__, static_url_path='')
 
